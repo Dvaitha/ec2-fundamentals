@@ -7,9 +7,9 @@
 sudo su
 
 #install httpd (Linux 2 Version)
-
 yum update -y
 yum install -y
+yum install -y httpd.x86_64
 systemctl start httpd.service
 systemctl enable httpd.service
-echo "Hello This is Dummy HTML Page Coming From $(hostname -f)" > /var/www/html/index.html
+echo "Hello From $(hostname -f)" > /var/www/html/index.html
